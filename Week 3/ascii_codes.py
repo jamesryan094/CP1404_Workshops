@@ -1,4 +1,6 @@
 def get_number(lower, upper):
+    if lower >= upper:
+        return lower
     is_valid = False
     while not is_valid:
         try:
@@ -12,13 +14,13 @@ def get_number(lower, upper):
     return num
 
 
-minimum = 1
-maximum = 136
+minimum = 33
+maximum = 127
 print(chr(get_number(minimum, maximum)))
 
 
 
 
 # for i in range(1, 129):
-#     print("Character: {}    code: {:>3}".format(chr(i), i))
-#     i += 1
+#      print("Character: {}    code: {:>3}".format(chr(i), i))
+#      i += 1
