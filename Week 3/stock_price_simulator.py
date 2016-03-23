@@ -5,10 +5,14 @@ MIN_PRICE = 0.01
 MAX_PRICE = 100.0
 INITIAL_PRICE = 10.0
 
+def format_currency(value):
+    return "${:,.2f}".format(value)
+
+
 day_count = 0
 price = INITIAL_PRICE
-print("Starting price: ${:,.2f}".format(price))
-print(type(day_count))
+print("Starting price: ", format_currency(price))
+#print(type(day_count))
 while price >= MIN_PRICE and price <= MAX_PRICE:
     priceChange = 0
     # generate a random integer of 1 or 2
@@ -23,4 +27,4 @@ while price >= MIN_PRICE and price <= MAX_PRICE:
         priceChange = random.uniform(-MAX_DECREASE, 0)
     price *= (1 + priceChange)
     day_count += 1
-    print("On day {}, the stock price was ${:,.2f}".format(day_count, price))
+    print("On day {}, the stock price was".format(day_count), format_currency(price))
