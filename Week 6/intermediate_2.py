@@ -7,4 +7,3 @@ if username_to_check in usernames:
     print("Access granted")
 else:
     print("Access denied")
-    
