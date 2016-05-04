@@ -1,0 +1,29 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: text_input
+            size_hint: 0.7, 1
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 0.3, 1
+            Button:
+                id: button_up
+                text: 'Up'
+                on_press: app.increment_up()
+            Button:
+                id: button_down
+                text: 'Down'
+                on_press: app.increment_down()
+    BoxLayout:
+        Button:
+            id: button_convert
+            text: 'Convert Mi to kM'
+            on_press: app.perform_conversion()
+    BoxLayout:
+        Label:
+            id: label
+            text: 'Enter number in white box'
+            color: 1, 1, 0, 1
+            font_size: 35
