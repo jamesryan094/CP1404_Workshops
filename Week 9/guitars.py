@@ -1,5 +1,5 @@
 class Guitar(object):
-    def __init__(self, name='', year=0, cost=0):
+    def __init__(self, name='', year=0, cost=0.0):
         self.name = name
         self.year = year
         self.cost = cost
@@ -23,7 +23,7 @@ def main():
     name = input("Name:")
     while name != '':
         year = int(input("Year:"))
-        cost = int(input("Cost: $"))
+        cost = float(input("Cost: $"))
         new_guitar = Guitar(name, year, cost)
         print(new_guitar)
         guitars.append(new_guitar)
@@ -36,4 +36,5 @@ def main():
             vintage_string = "(Vintage)"
         print("Guitar {}: {:>20} ({}), worth ${:10,.2f} {}".format(i + 1, guitar.name, guitar.year, guitar.cost, vintage_string))
 
-main()
+if __name__ == "__main__":
+    main()
